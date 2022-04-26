@@ -1,0 +1,28 @@
+{
+  "plugins": ["plugins/markdown", "plugins/summarize"],
+  "tags": {
+    "allowUnknownTags": false,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "include": ["./dist/modules", "./README.md"]
+  },
+  "opts": {
+    "template": "./node_modules/clean-jsdoc-theme",
+    "encoding": "utf8",
+    "prism-theme": "prism-custom",
+    "destination": "./docs",
+    "recurse": true,
+    "verbose": true,
+    "theme_opts": {
+      "theme": "dark"
+    }
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "metadata": {
+    "title": "RealisticDatabase"
+  }
+}

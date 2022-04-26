@@ -1,0 +1,31 @@
+{
+  "name": "realistic-database",
+  "version": "1.0.0",
+  "description": "A basic database for me to use in applications because I'm tired of making boilerplate code",
+  "main": "./dist/index.js",
+  "types": "./dist/declarations",
+  "scripts": {
+    "test": "echo \"We do not provide a test command as one is unnecessary.\"",
+    "jsdoc": "rimraf ./docs/* && jsdoc -c ./jsdoc.conf.json",
+    "transpile": "rimraf ./dist/* && tsc",
+    "build": "npm run transpile && npm run jsdoc"
+  },
+  "keywords": [
+    "db",
+    "database"
+  ],
+  "author": "Realistic",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.27",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.13.0"
+  },
+  "dependencies": {
+    "clean-jsdoc-theme": "^3.3.4",
+    "eslint-plugin-html": "^6.2.0",
+    "realistic-database": "file:realistic-database-1.0.0.tgz",
+    "rimraf": "^3.0.2"
+  }
+}
