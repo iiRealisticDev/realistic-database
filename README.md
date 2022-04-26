@@ -56,4 +56,4 @@ console.log(allData);
 
 ## Changelog 1
 
-- Release, everything on here is new. Read the documentation for help.
+- Release, everything on here is new. Read the [documentation](https://iirealisticdev.github.io/realistic-database/index.html) for help.
