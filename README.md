@@ -9,6 +9,10 @@ If you are now finding this repository as I made it public, you **must** install
 ```shell
 npm i path/to/realistic-database-1.0.0.tgz
 ```
+or you can install it from the raw version of the `.tgz` file on the repo, not that the `?raw=true` must be present, otherwise npm will receive throw an error:
+```shell
+npm i https://github.com/iiRealisticDev/realistic-database/blob/main/realistic-database-1.0.0.tgz?raw=true
+```
 
 The below method is not yet available, but is there for when I do add the package to npm.
 ```shell
