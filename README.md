@@ -5,7 +5,7 @@
 - As of now, I did not add built-in encryption for data. I may add this in the future as an optional feature. Our current reason for doing this is because not everyone wants/needs encrypted data and encrypting it yourself is farily simple, and I'm yet to have time to add it.
 
 ## Installation
-
+If you are now finding this repository as I made it public, you **must** install via the `.tgz` file. 
 ```shell
 npm i realistic-database
 ```
