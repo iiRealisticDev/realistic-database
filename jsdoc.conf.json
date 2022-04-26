@@ -11,7 +11,7 @@
     "template": "./node_modules/clean-jsdoc-theme",
     "encoding": "utf8",
     "prism-theme": "prism-custom",
-    "destination": "./docs",
+    "destination": "../iiRealisticDev.github.io/realistic-database",
     "recurse": true,
     "verbose": true,
     "theme_opts": {

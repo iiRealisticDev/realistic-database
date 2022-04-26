@@ -5,8 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/declarations",
   "scripts": {
-    "test": "echo \"We do not provide a test command as one is unnecessary.\"",
-    "jsdoc": "rimraf ./docs/* && jsdoc -c ./jsdoc.conf.json",
+    "jsdoc": "rimraf ../iiRealisticDev.github.io/realistic-database && jsdoc -c ./jsdoc.conf.json",
     "transpile": "rimraf ./dist/* && tsc",
     "build": "npm run transpile && npm run jsdoc"
   },
