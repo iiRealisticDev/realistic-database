@@ -6,7 +6,7 @@
 
 ## Installation
 If you are now finding this repository as I made it public, you **must** install via the `.tgz` file. You can download the `.tgz` file from [here](https://github.com/iiRealisticDev/realistic-database/blob/main/realistic-database-1.0.0.tgz) and install it into your project with:
-```shell`
+```shell
 npm i path/to/realistic-database-1.0.0.tgz
 ```
 
