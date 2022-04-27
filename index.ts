@@ -1,9 +1,10 @@
 import RealisticDatabase from "./modules/database";
+import { DBFile } from "./modules/utils";
 
 export { RealisticDatabase } from "./modules/database";
-export { File } from "./modules/utils";
+export { DBFile } from "./modules/utils";
 
 export default {
   RealisticDatabase,
-  File,
+  DBFile,
 };

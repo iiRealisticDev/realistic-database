@@ -1,13 +1,13 @@
-import { File } from "./utils.js";
+import { DBFile } from "./utils.js";
 export declare class RealisticDatabase {
     dbPath: string;
     /**
      * @summary Create a database.
      * @description Creates a database at the given path, and presents the necessary methods to interact with it.
      * @param {string} dbDir A path to the directory the DB should be in.
-     * @param {File} dbFile A file where the DB should be stored. Must be JSON.
+     * @param {DBFile} dbFile A file where the DB should be stored. Must be JSON.
      */
-    constructor(dbDir: string, dbFile: File);
+    constructor(dbDir: string, dbFile: DBFile);
     /**
      * @summary Returns the full database.
      * @description This is used to write to the database using [put](#put), and and return information using [get](#get).
@@ -36,6 +36,13 @@ export declare class RealisticDatabase {
      * @returns The data assigned to the key or `null`.
      */
     get(key: string, validator: (value: any) => boolean): any | null;
+    /**
+     *
+     * @param {string} key
+     * @param {validatorFunc} validator
+     * @returns True if removed, false if not.
+     */
+    remove(key: string, validator: (value: any) => boolean): boolean;
 }
 export default RealisticDatabase;
 /**

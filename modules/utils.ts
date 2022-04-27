@@ -1,6 +1,6 @@
 import fs from "fs";
 
-export class File {
+export class DBFile {
   name: string;
   content: string;
   /**
@@ -24,10 +24,10 @@ export class File {
  * @summary Make a directory with files.
  * @description Used to create the database file and necessary directories.
  * @param {string} dir The directory to create the file in.
- * @param {File} file The file to create.
+ * @param {DBFile} file The file to create.
  * @param {boolean} [forceOverwrite=false] A boolean indicating whether to overwrite the database if it already exists. False by default.
  */
-export function makeDir(dir: string, file: File, forceOverwrite = false) {
+export function makeDir(dir: string, file: DBFile, forceOverwrite = false) {
   if (!fs.existsSync(`${dir}/${file.name}`) && !forceOverwrite) {
     fs.mkdirSync(dir, { recursive: true });
   }

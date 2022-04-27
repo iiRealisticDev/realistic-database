@@ -26,9 +26,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = exports.writeDB = exports.readDB = exports.makeDir = exports.File = void 0;
+exports.default = exports.writeDB = exports.readDB = exports.makeDir = exports.DBFile = void 0;
 const fs_1 = __importDefault(require("fs"));
-class File {
+class DBFile {
     /**
      * @summary Construct a File for usage in the database.
      * @description This can also just be a simple object of `{name: "", content: ""}`, however this was made for ease of use.
@@ -47,12 +47,12 @@ class File {
         this.content = content;
     }
 }
-exports.File = File;
+exports.DBFile = DBFile;
 /**
  * @summary Make a directory with files.
  * @description Used to create the database file and necessary directories.
  * @param {string} dir The directory to create the file in.
- * @param {File} file The file to create.
+ * @param {DBFile} file The file to create.
  * @param {boolean} [forceOverwrite=false] A boolean indicating whether to overwrite the database if it already exists. False by default.
  */
 function makeDir(dir, file, forceOverwrite = false) {

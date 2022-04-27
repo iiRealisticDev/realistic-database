@@ -16,11 +16,11 @@ npm i https://github.com/iiRealisticDev/realistic-database/blob/main/realistic-d
 
 ## Code Example 
 ```typescript
-import { RealisticDatabase, File } from "realistic-database";
+import { RealisticDatabase, DBFile } from "realistic-database";
 
 // Create a new database. The first argument is the directory
 // The second argument is a File object that represents the database file name & content.
-const db = new RealisticDatabase("./database", new File("database.json", "{}"));
+const db = new RealisticDatabase("./database", new DBFile("database.json", "{}"));
 
 // Make an entry to the database. Can be any JSON-valid key-value pair.
 db.put("abc", {a: "b", c: "d"});

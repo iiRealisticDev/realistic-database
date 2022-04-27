@@ -8,10 +8,10 @@ class RealisticDatabase {
      * @summary Create a database.
      * @description Creates a database at the given path, and presents the necessary methods to interact with it.
      * @param {string} dbDir A path to the directory the DB should be in.
-     * @param {File} dbFile A file where the DB should be stored. Must be JSON.
+     * @param {DBFile} dbFile A file where the DB should be stored. Must be JSON.
      */
     constructor(dbDir, dbFile) {
-        if (!(dbFile instanceof utils_js_1.File))
+        if (!(dbFile instanceof utils_js_1.DBFile))
             throw new Error("Database file must be a File.");
         if (!dbFile.name.endsWith(".json"))
             throw new Error("Database file must be JSON.");
@@ -74,6 +74,23 @@ class RealisticDatabase {
                 return null;
             return valid[0];
         }
+    }
+    /**
+     *
+     * @param {string} key
+     * @param {validatorFunc} validator
+     * @returns True if removed, false if not.
+     */
+    remove(key, validator) {
+        const db = this.read();
+        if (!db[key])
+            throw new Error(`Could not find ${key} in database.`);
+        const valid = db[key].filter(validator);
+        if (valid.length === 0)
+            return false;
+        db[key].splice(db[key].indexOf(valid[0]), 1);
+        this.save(db);
+        return true;
     }
 }
 exports.RealisticDatabase = RealisticDatabase;
