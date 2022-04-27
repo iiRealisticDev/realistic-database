@@ -16,19 +16,38 @@ npm i https://github.com/iiRealisticDev/realistic-database/blob/main/realistic-d
 
 ## Code Example 
 ```typescript
+// Import the databse and DBFile class
 import { RealisticDatabase, DBFile } from "realistic-database";
 
-// Create a new database. The first argument is the directory
-// The second argument is a File object that represents the database file name & content.
-const db = new RealisticDatabase("./database", new DBFile("database.json", "{}"));
+// Make a database in `./database` with the name `database.json` and content `{}`
+const db = new RealisticDatabase("./database", new DBFile("database.json","{}"));
 
-// Make an entry to the database. Can be any JSON-valid key-value pair.
+// Add an entry to the key `abc` with the value `{a: "b", c: "d"}`. Multiple entries can exist under one key.
 db.put("abc", {a: "b", c: "d"});
 
-// Get an entry from the database. The validator can be any sort of validator, but in this example we used a simple one.
-const dbEntry = db.get("abc", (entry) => entry.a == "b")
+// Get an entry from the key `abc` where the entry is an object with the property `a` set to `"b"`.
+const dbEntry = db.get("abc", (entry) => entry.a == "b");
 
-console.log(dbEntry)
+// Log the entry
+console.log(dbEntry);
+
+// Delete the same entry
+const del = db.remove("abc", (entry) => entry.a == "b");
+
+// Log the deletion status, true if it was deleted, false if not.
+console.log(del);
+
+// Confirm removal by attempting to get it and logging the output.
+const dbEntryRemoved = db.get("abc", (entry) => entry.a == "b");
+
+console.log(dbEntryRemoved)
+
+/*
+Expected output:
+{ a: 'b', c: 'd' }
+true
+null
+*/
 ```
 
 ## Credits

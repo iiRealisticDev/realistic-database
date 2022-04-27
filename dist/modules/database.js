@@ -50,7 +50,7 @@ class RealisticDatabase {
         if (typeof key !== "string")
             throw new Error("Key must be a string.");
         const db = this.read();
-        if (db[key] && !forceOverwrite)
+        if (db[key].includes(value) && !forceOverwrite)
             throw new Error("Key already exists and forceOverwrite is disabled.");
         if (!db[key])
             db[key] = [];
