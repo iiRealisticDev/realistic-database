@@ -44,7 +44,7 @@ class RealisticDatabase {
      * @description This adds a value to the database and automatically saves the changes.
      * @param {string} key The key to store it under.
      * @param {unknown} value The value to store.
-     * @param {boolean} forceOverwrite A boolean indicating whether to overwrite the database if it already exists, `true` by default.
+     * @param {boolean} forceOverwrite A boolean indicating whether to overwrite the database entry if it already exists, `true` by default.
      */
     put(key, value, forceOverwrite = true) {
         if (typeof key !== "string")

@@ -5,45 +5,30 @@
 - As of now, I did not add built-in encryption for data. I may add this in the future as an optional feature. Our current reason for doing this is because not everyone wants/needs encrypted data and encrypting it yourself is farily simple, and I'm yet to have time to add it.
 
 ## Installation
-If you are now finding this repository as I made it public, you **must** install via the `.tgz` file. You can download the `.tgz` file from [here](https://github.com/iiRealisticDev/realistic-database/blob/main/realistic-database-1.0.0.tgz) and install it into your project with:
+If you are now finding this project as I made it public, you **must** install via the `.tgz` file. You can download the `.tgz` file from [here](https://github.com/iiRealisticDev/realistic-database/blob/main/realistic-database-1.0.0.tgz) and install it into your project with:
 ```shell
 npm i path/to/realistic-database-1.0.0.tgz
 ```
-or you can install it from the raw version of the `.tgz` file on the repo, not that the `?raw=true` must be present, otherwise npm will receive throw an error:
+or you can install it from the raw version of the `.tgz` file on the repo, note that the `?raw=true` must be present, otherwise npm will not install it:
 ```shell
 npm i https://github.com/iiRealisticDev/realistic-database/blob/main/realistic-database-1.0.0.tgz?raw=true
 ```
 
-The below method is not yet available, but is there for when I do add the package to npm.
-```shell
-npm i realistic-database
-```
 ## Code Example 
-
-Then, if you'd like to, test this code. It's a very simple example with little practical usage, but shows how the package works. Note that the package is written in TypeScript, and so is the example as a result of such. It's relatively simple to convert it to a JavaScript file, however. Just remove the type annotations and switch `import`s to `require`.
-
 ```typescript
-import { RealisticDatabase, utils } from "./index";
-import { File } from "./modules/utils";
+import { RealisticDatabase, File } from "realistic-database";
 
-// Generally the content will be `{}` for an empty database, an empty string or invalid JSON will cause an error.
-const db: RealisticDatabase = new RealisticDatabase("./data", new File("database.json", "{}"));
+// Create a new database. The first argument is the directory
+// The second argument is a File object that represents the database file name & content.
+const db = new RealisticDatabase("./database", new File("database.json", "{}"));
 
-db.put("key", {a: "b", c: "d"}); // Adds `value` to the database, under the key `key`
+// Make an entry to the database. Can be any JSON-valid key-value pair.
+db.put("abc", {a: "b", c: "d"});
 
-const data: unknown = db.get("key", (entry) => entry.a === "b"); // Gets the data from "key" where the entry === value
+// Get an entry from the database. The validator can be any sort of validator, but in this example we used a simple one.
+const dbEntry = db.get("abc", (entry) => entry.a == "b")
 
-console.log(data);
-
-const allData: { [key: string]: unknown[] } = db.read(); // Gets the entire database file's content. Uncommon that you'll need this and it's mostly used internally, but may be helpful for debugging or something.
-
-/* 
-There's also a [RealisticDatabase.save()](./RealisticDatabase.html#save) method, which will save the database. 
-This is automatically called when the database is updated with `put()`, however if you make manual edits you may want to. 
-Generally you should not make manual edits or any edits outside of `put()` unless you know what you're doing.
-This is because chances are it'll cause errors if you use `get()` on a key that isn't set up as as a database entry.
-*/
-console.log(allData);
+console.log(dbEntry)
 ```
 
 ## Credits
