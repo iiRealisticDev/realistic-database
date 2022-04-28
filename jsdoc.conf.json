@@ -15,14 +15,28 @@
     "recurse": true,
     "verbose": true,
     "theme_opts": {
-      "theme": "dark"
+      "theme": "dark",
+      "meta": [
+        {
+          "name": "Author",
+          "content": "iiRealistic_Dev"
+        },
+        {
+          "name": "Description",
+          "value": "A simple JSON-based database."
+        }
+      ],
+      "menu": [
+        {
+          "title": "GitHub Repo",
+          "id": "github",
+          "link": "https://github.com/iiRealisticDev/realistic-database"
+        }
+      ]
     }
   },
   "templates": {
     "cleverLinks": false,
     "monospaceLinks": false
-  },
-  "metadata": {
-    "title": "RealisticDatabase"
   }
 }

@@ -9,7 +9,7 @@ export class RealisticDatabase {
    * @param {string} dbDir A path to the directory the DB should be in.
    * @param {DBFile} dbFile A file where the DB should be stored. Must be JSON.
    * @example
-   * const db = new RealisticDatabase("./db", new File("db.json", "{}"));
+   * const db = new RealisticDatabase("./db", new DBFile("db.json", "{}"));
    */
   constructor(dbDir: string, dbFile: DBFile) {
     if (!(dbFile instanceof DBFile)) throw new Error("Database file must be a File.");
