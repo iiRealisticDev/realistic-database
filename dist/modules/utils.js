@@ -34,6 +34,8 @@ class DBFile {
      * @description This can also just be a simple object of `{name: "", content: ""}`, however this was made for ease of use.
      * @param {string} name The name of the file.
      * @param {string} content The content of the file.
+     * @example
+     * const dbFile = new DBFile("db.json", "{}");
      */
     constructor(name, content) {
         var _a;
@@ -54,6 +56,8 @@ exports.DBFile = DBFile;
  * @param {string} dir The directory to create the file in.
  * @param {DBFile} file The file to create.
  * @param {boolean} [forceOverwrite=false] A boolean indicating whether to overwrite the database if it already exists. False by default.
+ * @example
+ * makeDir("./db", new DBFile("db.json", "{}"));
  */
 function makeDir(dir, file, forceOverwrite = false) {
     if (!fs_1.default.existsSync(`${dir}/${file.name}`) && !forceOverwrite) {
@@ -69,6 +73,8 @@ exports.makeDir = makeDir;
  * @description Used internally in `RealisticDatabase.read`.
  * @param {string} dbPath The path to the database.
  * @returns {Record<string,unknown[]>} The JSON Object in the DB.
+ * @example
+ * const db = readDB("./db/db.json");
  */
 function readDB(dbPath) {
     const file = fs_1.default.readFileSync(dbPath, { encoding: "utf8" });
@@ -81,6 +87,8 @@ exports.readDB = readDB;
  * @description Used in [RealisticDatabase.save](./RealisticDatabase.html#put) as a shorthand.
  * @param {string} dbPath The DB path
  * @param {Record<string, unknown[]>} json The new JSON to write.
+ * @example
+ * const db = writeDB("./db/db.json", {a: "b", c: "d"});
  */
 function writeDB(dbPath, json) {
     fs_1.default.writeFileSync(dbPath, JSON.stringify(json));

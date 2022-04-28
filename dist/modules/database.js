@@ -9,6 +9,8 @@ class RealisticDatabase {
      * @description Creates a database at the given path, and presents the necessary methods to interact with it.
      * @param {string} dbDir A path to the directory the DB should be in.
      * @param {DBFile} dbFile A file where the DB should be stored. Must be JSON.
+     * @example
+     * const db = new RealisticDatabase("./db", new File("db.json", "{}"));
      */
     constructor(dbDir, dbFile) {
         if (!(dbFile instanceof utils_js_1.DBFile))
@@ -27,6 +29,8 @@ class RealisticDatabase {
      * @summary Returns the full database.
      * @description This is used to write to the database using [put](#put), and and return information using [get](#get).
      * @returns {Record<string, unknown[]>} A JSON object representing the database.
+     * @example
+     * const db = db.read();
      */
     read() {
         return (0, utils_js_1.readDB)(this.dbPath);
@@ -35,6 +39,8 @@ class RealisticDatabase {
      * @summary Saves the new information to the file.
      * @description This is used interally with the [put](#put) method, however is usable otherwise if needed.
      * @param {Record<string, unknown[]>} newJson The JSON to write to the file.
+     * @example
+     * db.save();
      */
     save(newJson) {
         (0, utils_js_1.writeDB)(this.dbPath, newJson);
@@ -45,6 +51,10 @@ class RealisticDatabase {
      * @param {string} key The key to store it under.
      * @param {unknown} value The value to store.
      * @param {boolean} forceOverwrite A boolean indicating whether to overwrite the database entry if it already exists, `true` by default.
+     * @example
+     * // Put an entry into "people" with the name John and age 21
+     * // But not if it already exists.
+     * db.put("people", { name: "John", age: 21 }, false);
      */
     put(key, value, forceOverwrite = true) {
         if (typeof key !== "string")
@@ -63,6 +73,8 @@ class RealisticDatabase {
      * @param {string} key
      * @param {validatorFunc} validator
      * @returns The data assigned to the key or `null`.
+     * @example
+     * db.get("people", (value) => value.name === "John" && value.age == 21);
      */
     get(key, validator) {
         const db = this.read();
@@ -76,10 +88,13 @@ class RealisticDatabase {
         }
     }
     /**
-     *
-     * @param {string} key
-     * @param {validatorFunc} validator
+     * @summary Remove an entry from a database key.
+     * @description This will remove the value from the database key, and automatically save the changes.
+     * @param {string} key The key the value is under.
+     * @param {validatorFunc} validator This will be used to determine the value to remove.
      * @returns True if removed, false if not.
+     * @example
+     * db.remove("people", (value) => value.name === "John");
      */
     remove(key, validator) {
         const db = this.read();
