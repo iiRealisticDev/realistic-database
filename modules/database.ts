@@ -57,7 +57,7 @@ export class RealisticDatabase {
   put(key: string, value: unknown, forceOverwrite = true) {
     if (typeof key !== "string") throw new Error("Key must be a string.");
     const db = this.read();
-    if (db[key as keyof typeof db].includes(value) && !forceOverwrite)
+    if (db[key as keyof typeof db] && db[key as keyof typeof db].includes(value) && !forceOverwrite)
       throw new Error("Key already exists and forceOverwrite is disabled.");
     if (!db[key as keyof typeof db]) db[key] = [];
     db[key].push(value);
