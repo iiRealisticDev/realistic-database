@@ -7,7 +7,7 @@
   "scripts": {
     "jsdoc": "rimraf ../iiRealisticDev.github.io/realistic-database && jsdoc -c ./jsdoc.conf.json",
     "transpile": "rimraf ./dist/* && tsc",
-    "build": "npm run transpile && npm run jsdoc && npm pack"
+    "build": "npm run transpile && npm run jsdoc"
   },
   "keywords": [
     "db",
