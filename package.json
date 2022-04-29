@@ -1,7 +1,7 @@
 {
   "name": "realistic-database",
   "version": "1.2.0",
-  "description": "A basic database for me to use in applications because I'm tired of making boilerplate code",
+  "description": "A basic noSQL database.",
   "main": "./dist/index.js",
   "types": "./dist/declarations",
   "scripts": {
