@@ -11,7 +11,7 @@ npm i path/to/realistic-database-1.0.1.tgz
 ```
 or you can install it from the raw version of the `.tgz` file on the repo, note that the `?raw=true` must be present, otherwise npm will not install it:
 ```shell
-npm i https://github.com/iiRealisticDev/realistic-database/blob/main/realistic-database-1.0.1.tgz?raw=true
+npm i https:\/\/github.com/iiRealisticDev/realistic-database/blob/main/realistic-database-1.0.1.tgz?raw=true
 ```
 
 ## Code Example 
