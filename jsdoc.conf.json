@@ -18,12 +18,32 @@
       "theme": "dark",
       "meta": [
         {
-          "name": "Author",
+          "name": "og:title",
+          "content": "Realistic Database - Docs"
+        },
+        {
+          "name": "og:description",
+          "content": "A simple JSON-based database."
+        },
+        {
+          "name": "theme-color",
+          "conte,nt": "#121216"
+        },
+        {
+          "name": "author",
           "content": "iiRealistic_Dev"
         },
         {
-          "name": "Description",
-          "value": "A simple JSON-based database."
+          "name": "generator",
+          "content": "JSDoc"
+        },
+        {
+          "name": "keywords",
+          "content": "js,node.js,database,data,datastorage,nosql"
+        },
+        {
+          "name": "color-scheme",
+          "content": "dark"
         }
       ],
       "menu": [
