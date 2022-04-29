@@ -52,7 +52,7 @@ null
 # Changelogs
 ## Version 1.1.0
 - Added NPM page to menu
-- Switched fron tarball insteall to `npm i realistic-database`
+- Switched fron tarball install to `npm i realistic-database`
 
 ## Version 1.0.1
 - Changed behaviour of forceOverwrite for `put`, it previously checked if the key existed, not the value in the key. This was made before I decided to do keys as arrays of entries.
