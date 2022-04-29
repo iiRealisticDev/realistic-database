@@ -5,14 +5,7 @@
 - As of now, I did not add built-in encryption for data. I may add this in the future as an optional feature. Our current reason for doing this is because not everyone wants/needs encrypted data and encrypting it yourself is farily simple, and I'm yet to have time to add it.
 
 ## Installation
-If you are now finding this project as I made it public, you **must** install via the `.tgz` file. You can download the `.tgz` file from [here](https://github.com/iiRealisticDev/realistic-database/blob/main/realistic-database-1.0.1.tgz) and install it into your project with:
-```shell
-npm i path/to/realistic-database-1.0.1.tgz
-```
-or you can install it from the raw version of the `.tgz` file on the repo, note that the `?raw=true` must be present, otherwise npm will not install it:
-```shell
-npm i https:\/\/github.com/iiRealisticDev/realistic-database/blob/main/realistic-database-1.0.1.tgz?raw=true
-```
+`npm i realistic-database`
 
 ## Code Example 
 ```typescript
@@ -57,11 +50,15 @@ null
 - We use [clean-jsdoc-theme](https://github.com/ankitskvmdam/clean-jsdoc-theme) to make the documentation look as nice as it does.
 
 # Changelogs
+## Version 1.1.0
+- Added NPM page to menu
+- Switched fron tarball insteall to `npm i realistic-database`
 
 ## Version 1.0.1
 - Changed behaviour of forceOverwrite for `put`, it previously checked if the key existed, not the value in the key. This was made before I decided to do keys as arrays of entries.
 - Added `@example` fields to all JSDocs.
 - Added [GitHub Repo](https://github.com/iiRealisticDev/realistic-database) link.
+- Added to NPM
 
 ## Version 1.0.0
 
@@ -70,3 +67,4 @@ null
 
 ## Links
 [Source - GitHub](https://github.com/iiRealisticDev/realistic-database)
+[npm](https://www.npmjs.com/package/realistic-database)

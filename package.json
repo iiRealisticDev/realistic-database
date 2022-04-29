@@ -24,7 +24,6 @@
   "dependencies": {
     "clean-jsdoc-theme": "^3.3.4",
     "eslint-plugin-html": "^6.2.0",
-    "realistic-database": "https://github.com/iiRealisticDev/realistic-database/blob/main/realistic-database-1.0.0.tgz?raw=true",
     "rimraf": "^3.0.2"
   }
 }

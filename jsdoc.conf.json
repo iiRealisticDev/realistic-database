@@ -51,6 +51,11 @@
           "title": "GitHub Repo",
           "id": "github",
           "link": "https://github.com/iiRealisticDev/realistic-database"
+        },
+        {
+          "title": "NPM page",
+          "id": "npm",
+          "link": "https://www.npmjs.com/package/realistic-database"
         }
       ]
     }
