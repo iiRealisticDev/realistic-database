@@ -11,10 +11,12 @@
   },
   "keywords": [
     "db",
-    "database"
+    "database",
+    "nosql",
+    "node-database"
   ],
-  "author": "Realistic",
-  "license": "ISC",
+  "author": "iiRealistic_Dev",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^17.0.27",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
@@ -25,5 +27,13 @@
     "clean-jsdoc-theme": "^3.3.4",
     "eslint-plugin-html": "^6.2.0",
     "rimraf": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iiRealisticDev/realistic-database.git"
+  },
+  "homepage": "https://iirealisticdev.github.io/realistic-database/index.html",
+  "bugs": {
+    "url": "https://github.com/iiRealisticDev/realistic-database/issues"
   }
 }
