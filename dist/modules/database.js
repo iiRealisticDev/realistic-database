@@ -9,6 +9,7 @@ class RealisticDatabase {
      * @description Creates a database at the given path, and presents the necessary methods to interact with it.
      * @param {string} dbDir A path to the directory the DB should be in.
      * @param {DBFile} dbFile A file where the DB should be stored. Must be JSON.
+     * @param {DBOptions} options A list of DB options.
      * @example
      * const db = new RealisticDatabase("./db", new DBFile("db.json", "{}"));
      */
