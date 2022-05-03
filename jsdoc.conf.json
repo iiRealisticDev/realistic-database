@@ -8,61 +8,31 @@
     "include": ["./dist/modules", "./README.md"]
   },
   "opts": {
-    "template": "./node_modules/clean-jsdoc-theme",
+    "template": "./node_modules/better-docs",
     "encoding": "utf8",
     "prism-theme": "prism-custom",
     "destination": "../iiRealisticDev.github.io/realistic-database",
     "recurse": true,
     "verbose": true,
-    "tutorials": "./tutorials",
-    "theme_opts": {
-      "theme": "dark",
-      "meta": [
-        {
-          "name": "og:title",
-          "content": "Realistic Database - Docs"
-        },
-        {
-          "name": "og:description",
-          "content": "A simple JSON-based database."
-        },
-        {
-          "name": "theme-color",
-          "conte,nt": "#121216"
-        },
-        {
-          "name": "author",
-          "content": "iiRealistic_Dev"
-        },
-        {
-          "name": "generator",
-          "content": "JSDoc"
-        },
-        {
-          "name": "keywords",
-          "content": "js,node.js,database,data,datastorage,nosql"
-        },
-        {
-          "name": "color-scheme",
-          "content": "dark"
-        }
-      ],
-      "menu": [
-        {
-          "title": "GitHub Repo",
-          "id": "github",
-          "link": "https://github.com/iiRealisticDev/realistic-database"
-        },
-        {
-          "title": "NPM page",
-          "id": "npm",
-          "link": "https://www.npmjs.com/package/realistic-database"
-        }
-      ]
-    }
+    "tutorials": "./tutorials"
   },
   "templates": {
     "cleverLinks": false,
     "monospaceLinks": false
+  },
+  "better-docs": {
+    "name": "Realistic Database",
+    "logo": "./logo.png",
+    "title": "Realistic Database",
+    "navLinks": [
+      {
+        "label": "GitHub Repo",
+        "href": "https://github.com/iiRealisticDev/realistic-database"
+      },
+      {
+        "label": "NPM Page",
+        "href": "https://www.npmjs.com/package/realistic-database"
+      }
+    ]
   }
 }
