@@ -47,7 +47,7 @@ null
 
 - Package created by iiRealistic_Dev
 - We use [JSDoc](https://jsdoc.app/) to generate this documentation.
-- We use [clean-jsdoc-theme](https://github.com/ankitskvmdam/clean-jsdoc-theme) to make the documentation look as nice as it does.
+- We use [better-docs](https://github.com/SoftwareBrothers/better-docs) to make the documentation look as nice as it does.
 
 # Changelogs
 ## Version 1.1.0

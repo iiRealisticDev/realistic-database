@@ -8,9 +8,8 @@
     "include": ["./dist/modules", "./README.md"]
   },
   "opts": {
-    "template": "./node_modules/better-docs",
+    "template": "node_modules/better-docs",
     "encoding": "utf8",
-    "prism-theme": "prism-custom",
     "destination": "../iiRealisticDev.github.io/realistic-database",
     "recurse": true,
     "verbose": true,

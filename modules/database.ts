@@ -79,7 +79,7 @@ export class RealisticDatabase {
     if (validator) {
       const valid = db[key].filter(validator);
       if (valid.length === 0) return null;
-      return valid[0];
+      return valid;
     }
   }
 
